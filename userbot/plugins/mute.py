@@ -36,7 +36,7 @@ async def startmute(event):
         else:
             return await event.edit("`You Need Admin Rights!`")
         if is_muted(userid, chat_id):
-            return await event.edit("`User Muted Already!`")
+            return await event.edit("`Muted!`")
         try:
             mute(userid, chat_id)
         except Exception as e:
@@ -67,7 +67,7 @@ async def endmute(event):
             return await event.edit("`Reply To A Message!`")
         chat_id = event.chat_id
         if not is_muted(userid, chat_id):
-            return await event.edit("`User Not Muted!`")
+            return await event.edit("`Unmuted`\n`Be Careful!`")
         try:
             unmute(userid, chat_id)
         except Exception as e:
@@ -111,7 +111,7 @@ async def startmute(event):
         else:
             return await event.edit("`You Need Admin Rights!`")
         if is_muted(userid, chat_id):
-            return await event.edit("`User Muted Already!`")
+            return await event.edit("`Muted!`")
         try:
             mute(userid, chat_id)
         except Exception as e:
@@ -142,7 +142,7 @@ async def endmute(event):
             return await event.edit("`Reply To A Message!`")
         chat_id = event.chat_id
         if not is_muted(userid, chat_id):
-            return await event.edit("`User Not Muted!`")
+            return await event.edit("`Unmuted`\n`Be Careful!`")
         try:
             unmute(userid, chat_id)
         except Exception as e:
