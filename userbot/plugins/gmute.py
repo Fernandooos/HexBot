@@ -22,7 +22,7 @@ async def startgmute(event):
     chat_id = event.chat_id
     chat = await event.get_chat()
     if is_muted(userid, "gmute"):
-        return await event.edit("`User Gmuted Already!`")
+        return await event.edit("`You Are Now Muted In All Groups Where I Am Admin.`")
     try:
         mute(userid, "gmute")
     except Exception as e:
@@ -50,7 +50,7 @@ async def endgmute(event):
         return await event.edit("`Reply To A Message!`")
     chat_id = event.chat_id
     if not is_muted(userid, "gmute"):
-        return await event.edit("`User Is Not Gmuted!`")
+        return await event.edit("`You Can Speak Now!\nBut Be Careful!`")
     try:
         unmute(userid, "gmute")
     except Exception as e:
@@ -79,7 +79,7 @@ async def startgmute(event):
     chat_id = event.chat_id
     chat = await event.get_chat()
     if is_muted(userid, "gmute"):
-        return await event.edit("`User Gmuted Already!`")
+        return await event.edit("`You Are Now Muted In All Groups Where I Am Admin.`")
     try:
         mute(userid, "gmute")
     except Exception as e:
@@ -107,7 +107,7 @@ async def endgmute(event):
         return await event.edit("`Reply To A Message!`")
     chat_id = event.chat_id
     if not is_muted(userid, "gmute"):
-        return await event.edit("`User Is Not Gmuted!`")
+        return await event.edit("`You Can Speak Now!\nBut Be Careful!`")
     try:
         unmute(userid, "gmute")
     except Exception as e:
