@@ -12,11 +12,11 @@ CACHE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME In Heroku!"
-USER_BOT_WARN_ZERO = "`You Were Spamming My Inbox, Hence You Are Blocked!`"
+USER_BOT_WARN_ZERO = "Não faça SPAM no meu PV!`"
 USER_BOT_NO_WARN = ("`Hey There!`\n"
-                    "`As You Can See, That I'm Not Online!`\n"
-                    f"`So, Leave Your Message`\n\n"
-                    "**DON'T SPAM MY INBOX!**")
+                    "`Se eu não estiver online, espere eu ficar!`\n"
+                    f"`Apenas deixe sua mensagem...`\n\n"
+                    "**NÃO FAÇA SPAM!**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -36,7 +36,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, reason)
-                await event.edit("Approved [{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit("[{}](tg://user?id={}) aprovado".format(firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.delete()
 
@@ -50,7 +50,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if not pmpermit_sql.is_approved(chat.id):
                 if not chat.id in PM_WARNS:
                     pmpermit_sql.approve(chat.id, "outgoing")
-                    bruh = "__Added to Approved PMs__"
+                    bruh = "__Adicionado aos permitidos__"
                     rko = await borg.send_message(event.chat_id, bruh)
                     await asyncio.sleep(3)
                     await rko.delete()
