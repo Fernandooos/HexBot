@@ -20,7 +20,7 @@ async def _(event):
     if reply_message.sender.bot:
        await event.edit("```Reply To Any Message!```")
        return
-    await event.edit("```Making a Quote```")
+    await event.edit("```Criando um Sticker...```")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1031952739))
