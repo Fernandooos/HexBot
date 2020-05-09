@@ -95,7 +95,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("`Updating...`")
+        await message.edit("`Atualizando...`")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
@@ -163,7 +163,7 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("Updating!\nType `.alive` After 5 Minutes To Check Status!")
+    await message.edit("Atualizando!\nEnvie `.alive` depois de 5 minutos para checar o Status!")
     await remote.push(refspec=refspec)
     await tgbot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
