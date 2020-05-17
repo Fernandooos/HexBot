@@ -13,9 +13,9 @@ CACHE = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME In Heroku!"
 USER_BOT_WARN_ZERO = "Não faça SPAM no meu PV!`"
-USER_BOT_NO_WARN = ("`Olá!`\n"
-                    "`Se eu não estiver online, espere eu ficar!`\n"
-                    f"`Apenas deixe sua mensagem...`\n\n"
+USER_BOT_NO_WARN = ("`Olá,`\n"
+                    "`Não gosto que me enviem mensagens no privado!`\n"
+                    f"`Caso tenha uma dúvida mande nos grupos e me marque.`\n\n"
                     "**NÃO FAÇA SPAM!**")
 
 
